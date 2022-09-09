@@ -2,8 +2,14 @@ from test_framework import generic_test
 
 
 def count_bits(x: int) -> int:
-    # TODO - you fill in here.
-    return 0
+    # my dirty solution
+    counter = 0
+    str_binary_format = str(bin(x))[2:]
+    for item in list(str_binary_format):
+        if item == "1":
+            counter = counter + 1
+    
+    return counter
 
 
 if __name__ == '__main__':
