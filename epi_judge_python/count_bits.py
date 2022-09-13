@@ -11,6 +11,16 @@ def count_bits(x: int) -> int:
     
     return counter
 
+def book_solution(x:int) -> int:
+    # testing the solution given in the book
+    counter = 0
+    while x:
+        # so, essentially anding(&) with the final bit of the number and adding the solution to it
+        counter += x & 1 # binary number and(&) binary 1 (padded with 0's).
+
+        x = x >> 1
+
+    return counter
 
 if __name__ == '__main__':
     exit(
